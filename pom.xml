@@ -3,7 +3,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.crashteam</groupId>
+    <parent>
+        <groupId>dev.crashteam</groupId>
+        <artifactId>library-parent-pom</artifactId>
+        <version>2.0.0</version>
+    </parent>
+
     <artifactId>liquibase-clickhouse</artifactId>
     <version>0.8.0</version>
     <packaging>jar</packaging>
