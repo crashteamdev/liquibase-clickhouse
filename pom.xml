@@ -39,13 +39,16 @@
             <name>Igor Epimakhov</name>
             <organization>mediarithmics</organization>
         </developer>
+        <developer>
+            <organization>crashteam</organization>
+            <organizationUrl>https://crashteam.dev</organizationUrl>
+        </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git:@github.com:mediarithmics/liquibase-clickhouse.git</connection>
-        <developerConnection>scm:git:git:@github.com:mediarithmics/liquibase-clickhouse.git</developerConnection>
-        <url>https://github.com/mediarithmics/liquibase-clickhouse</url>
-        <tag>HEAD</tag>
+        <connection>scm:git:git://github.com/crashteamdev/jvm-shared-resources.git</connection>
+        <developerConnection>scm:git:ssh://github.com/crashteamdev/jvm-shared-resources.git</developerConnection>
+        <url>https://github.com/crashteamdev/jvm-shared-resources/tree/master</url>
     </scm>
 
     <licenses>
