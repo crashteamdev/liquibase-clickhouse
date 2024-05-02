@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>liquibase-clickhouse</artifactId>
-    <version>0.8.1</version>
+    <version>0.8.2</version>
     <packaging>jar</packaging>
     <inceptionYear>2020</inceptionYear>
 
@@ -105,6 +105,16 @@
             <version>5.3.1</version>
         </dependency>
         <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+            <version>${typesafe-config.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <version>${liquibase.version}</version>
@@ -145,16 +155,6 @@
             <artifactId>junit-jupiter</artifactId>
             <version>${test-containers.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>${snakeyaml.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.typesafe</groupId>
-            <artifactId>config</artifactId>
-            <version>${typesafe-config.version}</version>
         </dependency>
     </dependencies>
 
@@ -231,6 +231,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
                             <shadedClassifierName>shaded</shadedClassifierName>
                             <relocations>
                                 <relocation>
