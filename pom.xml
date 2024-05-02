@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>liquibase-clickhouse</artifactId>
-    <version>0.8.0</version>
+    <version>0.8.1</version>
     <packaging>jar</packaging>
     <inceptionYear>2020</inceptionYear>
 
@@ -231,7 +231,6 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <shadedArtifactAttached>true</shadedArtifactAttached>
                             <shadedClassifierName>shaded</shadedClassifierName>
                             <relocations>
                                 <relocation>
