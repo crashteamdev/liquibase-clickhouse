@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>liquibase-clickhouse</artifactId>
-    <version>0.8.2</version>
+    <version>0.8.3</version>
     <packaging>jar</packaging>
     <inceptionYear>2020</inceptionYear>
 
@@ -46,9 +46,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/crashteamdev/jvm-shared-resources.git</connection>
-        <developerConnection>scm:git:ssh://github.com/crashteamdev/jvm-shared-resources.git</developerConnection>
-        <url>https://github.com/crashteamdev/jvm-shared-resources/tree/master</url>
+        <connection>scm:git:git://github.com/crashteamdev/liquibase-clickhouse.git</connection>
+        <developerConnection>scm:git:ssh://github.com/crashteamdev/liquibase-clickhouse.git</developerConnection>
+        <url>https://github.com/crashteamdev/liquibase-clickhouse/tree/master</url>
     </scm>
 
     <licenses>
@@ -217,41 +217,6 @@
                             <goal>update-project-license</goal>
                             <goal>add-third-party</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>${maven-shade-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <shadedArtifactAttached>true</shadedArtifactAttached>
-                            <shadedClassifierName>shaded</shadedClassifierName>
-                            <relocations>
-                                <relocation>
-                                    <pattern>com.</pattern>
-                                    <shadedPattern>shaded.liquibase.com.</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>net.</pattern>
-                                    <shadedPattern>shaded.liquibase.net.</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>org.</pattern>
-                                    <shadedPattern>shaded.liquibase.org.</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>ru.</pattern>
-                                    <shadedPattern>shaded.liquibase.ru.</shadedPattern>
-                                </relocation>
-                            </relocations>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
